@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Question;
+
+class QuestionController extends Controller
+{
+    //
+    public function index()
+    {
+        $questions = Question::query()->latest()->get();
+        return view('questions.index', ['questions' => $questions]);
+    }
+}
