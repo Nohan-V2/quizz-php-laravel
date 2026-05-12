@@ -8,7 +8,8 @@ use App\Models\Book;
 
 class HomeController extends Controller
 {
-    function index() {
+    function index()
+    {
         $books = Book::all();
         return view('home', ["books" => $books]);
     }
