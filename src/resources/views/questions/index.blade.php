@@ -16,3 +16,4 @@
 <p><a href="/">Retour à l'accueil</a></p>
 <p><a href="/quizzes">Voir les quizz</a></p>
 <p><a href="/users">Voir les utilisateurs</a></p>
+<p><a href="/responses">Voir les réponses</a></p>
