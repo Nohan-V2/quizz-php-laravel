@@ -1,0 +1,41 @@
+form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.under-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+input {
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+}
+
+.label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.button-sign-in {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+}
