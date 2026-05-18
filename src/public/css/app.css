@@ -37,5 +37,50 @@ input {
     width: 80%;
     display: flex;
     justify-content: center;
-    background-color: blue;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #4880FF;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: white;
+    border-radius: 8px;
+    font-size: 32px;
+}
+
+.login-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.welcome {
+    font-weight: 100;
+}
+
+span {
+    font-weight: 700;
+}
+
+.welcome-page-wrapper {
+    display: flex;
+}
+
+
+.title-welcome-wrapper {
+    width: 50%;
+}
+
+.link-wrapper {
+    width: 50%;
+
+    a {
+        text-decoration: none;
+        font-style: none;
+    }
+
+    li {
+        list-style: none;
+    }
 }

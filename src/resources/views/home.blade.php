@@ -14,6 +14,7 @@
 <p><a href="/responses">Voir les réponses</a></p>
 
 
+<div class="login-wrapper">
 <h1>Login to Account</h1>
 <p class="under-title">Please enter your email and password to continue</p>
 <form action="" method="post">
@@ -33,5 +34,7 @@
     <button class="button-sign-in" type="submit">Sign In</button>
 </form>
 <p class="create-account-text">Don't have an account? <a class="link-create-account" href="">Create Account</a></p>
+</div>
+
 </body>
 </html>
