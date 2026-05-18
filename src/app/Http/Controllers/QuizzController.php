@@ -10,12 +10,12 @@ class QuizzController extends Controller
     public function index()
     {
         $quizzes = Quizz::query()->latest()->get();
-        return view('quizz.index', ['quizzes' => $quizzes]);
+        return view('quizzes.index', ['quizzes' => $quizzes]);
     }
 
     public function showOneQuizz($id)
     {
-        $quizz = Quizz::query()->findOrFail($id);
-        return view('quizz.show', ['quizz' => $quizz]);
+        $quizz = Quizz::query()->with('questions.answers')->findOrFail($id);
+        return view('quizzes.show', ['quizz' => $quizz]);
     }
 }
