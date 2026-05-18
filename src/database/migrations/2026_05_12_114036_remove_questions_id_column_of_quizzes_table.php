@@ -11,7 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        if (! Schema::hasColumn('quizzes', 'question_id')) {
+            return;
+        }
+
         Schema::table('quizzes', function (Blueprint $table) {
             $table->dropColumn('question_id');
         });
@@ -22,7 +25,10 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        if (Schema::hasColumn('quizzes', 'question_id')) {
+            return;
+        }
+
         Schema::table('quizzes', function (Blueprint $table) {
             $table->foreignId('question_id')->constrained('questions')->onCascadeOnDelete();
         });

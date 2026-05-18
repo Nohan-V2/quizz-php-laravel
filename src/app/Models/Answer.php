@@ -6,20 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Response extends Model
+class Answer extends Model
 {
     use HasFactory;
 
-    protected $table = 'response';
+    protected $table = 'answers';
 
-    protected $fillable = ['response', 'is_correct', 'question_id'];
-
-    protected function casts(): array
-    {
-        return [
-            'is_correct' => 'boolean',
-        ];
-    }
+    protected $fillable = ['answer', 'is_correct', 'question_id'];
 
     public function question(): BelongsTo
     {

@@ -7,8 +7,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ResponseController;
 
-Route::get("/", [HomeController::class, 'index']);
-Route::get("/quizzes", [QuizzController::class, 'index']);
-Route::get("/users", [UserController::class, 'index']);
-Route::get("/questions", [QuestionController::class, 'index']);
-Route::get("/responses", [ResponseController::class, 'index']);
+Route::get("/", [QuizzController::class, 'index']);
+Route::get("/quizzes", [QuizzController::class, 'index'])->name('quizzes');
+Route::get("/quizzes/{id}", [QuizzController::class, 'showOneQuizz'])->name('quizzes.show');
+Route::get("/login", [AuthController::class, 'login'])->name('login');
+Route::get("/signup", [AuthController::class, 'signup'])->name('signup');

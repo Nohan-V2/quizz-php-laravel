@@ -7,7 +7,7 @@
     @foreach ($questions as $question)
     <li>
         <strong>{{ $question->question }}</strong>
-        <strong>{{ $question->answer }}</strong>
+        <span> — position {{ $question->position }} (quiz #{{ $question->quizz_id }})</span>
     </li>
     @endforeach
 </ul>

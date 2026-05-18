@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Question extends Model
 {
@@ -12,12 +13,15 @@ class Question extends Model
 
     protected $table = 'questions';
 
-    protected $fillable = ['question', 'answer'];
+    protected $fillable = ['question', 'position', 'quizz_id'];
 
-    public function quizzes(): BelongsToMany
+    public function quizz(): BelongsTo
     {
-        return $this->belongsToMany(Quizz::class, 'quizz_question')
-            ->withPivot('score')
-            ->withTimestamps();
+        return $this->belongsTo(Quizz::class);
+    }
+
+    public function answers(): HasMany
+    {
+        return $this->hasMany(Answer::class);
     }
 }
