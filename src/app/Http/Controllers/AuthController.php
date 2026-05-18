@@ -5,12 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
-class UserController extends Controller
+class AuthController extends Controller
 {
-    //
-    public function index()
+    public function login()
     {
-        $users = User::query()->latest()->get();
-        return view('users.index', ['users' => $users]);
+        return view('auth.login');
+    }
+
+    public function signup()
+    {
+        return view('auth.signup');
+    }
+
+    public function signout()
+    {
+        return redirect()->route('quizzes');
     }
 }
