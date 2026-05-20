@@ -26,12 +26,6 @@
             @endforeach
         </ul>
         @endif
-
-        <nav>
-            <a href="{{ route('questions') }}">Voir les questions</a> |
-            <a href="{{ route('users') }}">Voir les utilisateurs</a> |
-            <a href="{{ route('responses') }}">Voir les réponses</a>
-        </nav>
     </main>
 </body>
 

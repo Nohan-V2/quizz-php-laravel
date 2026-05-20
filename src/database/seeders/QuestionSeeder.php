@@ -15,29 +15,32 @@ class QuestionSeeder extends Seeder
         $questions = [
             [
                 'question' => 'Qu\'est ce que HTML ?',
-                'position' => 1,
+                'quizz_id' => 1,
+            ],
+            [
+                'question' => 'Qu\'est ce que HTML ?',
+                'quizz_id' => 1,
+            ],
+            [
+                'question' => 'Qu\'est ce que HTML ?',
                 'quizz_id' => 1,
             ],
             [
                 'question' => 'Qu\'est ce que CSS ?',
-                'position' => 1,
                 'quizz_id' => 2,
             ],
             [
                 'question' => 'Qu\'est ce que JavaScript ?',
-                'position' => 1,
                 'quizz_id' => 3,
             ],
             [
                 'question' => 'Qu\'est ce que l\'ACCESSIBILITY ?',
-                'position' => 1,
                 'quizz_id' => 4,
             ],
         ];
         foreach ($questions as $question) {
             Question::create([
                 'question' => $question['question'],
-                'position' => $question['position'],
                 'quizz_id' => $question['quizz_id'],
             ]);
         }

@@ -21,7 +21,7 @@
                     <p>Question {{ $question->position }} of {{ $quizz->questions->count() }}</p>
                     <h2>{{ $question->question }}</h2>
                 </div>
-                <form action="{{ route('submit_answer', ['question_id' => $question->id]) }}" method="POST">
+                <form action="" method="POST">
                     @foreach ($question->answers as $answer)
                     <input type="radio" name="answer" value="{{ $answer->id }}" id="answer-{{ $answer->id }}">
                     {{ $answer->answer }}

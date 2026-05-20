@@ -13,9 +13,9 @@ class QuizzController extends Controller
         return view('quizzes.index', ['quizzes' => $quizzes]);
     }
 
-    public function showOneQuizz($id)
+    public function showOneQuizz($quizz_id, $question_id)
     {
-        $quizz = Quizz::query()->with('questions.answers')->findOrFail($id);
+        $quizz = Quizz::query()->with('questions.answers')->findOrFail($quizz_id);
         return view('quizzes.show', ['quizz' => $quizz]);
     }
 }

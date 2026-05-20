@@ -9,10 +9,7 @@ use App\Http\Controllers\UserController;
 
 Route::get("/", [QuizzController::class, 'index']);
 Route::get("/quizzes", [QuizzController::class, 'index'])->name('quizzes');
-Route::get("/quizzes/{id}", [QuizzController::class, 'showOneQuizz'])->name('quizzes.show');
-Route::get("/questions", [QuestionController::class, 'index'])->name('questions');
-Route::get("/users", [UserController::class, 'index'])->name('users');
-Route::get("/responses", [AnswerController::class, 'index'])->name('responses');
+Route::get("/quizzes/{quizz_id}/questions/{question_id}", [QuizzController::class, 'showOneQuizz'])->name('quizzes.show');
 Route::get("/login", [AuthController::class, 'login'])->name('login');
 Route::get("/signup", [AuthController::class, 'signup'])->name('signup');
 Route::get("/logout", [AuthController::class, 'logout'])->name('logout');
