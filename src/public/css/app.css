@@ -78,9 +78,19 @@ span {
     a {
         text-decoration: none;
         font-style: none;
+        background-color: #FFFFFF;
     }
 
     li {
         list-style: none;
     }
+}
+
+body {
+    background-color: #F4F6FA;
+}
+
+.logo-quizz {
+    width: 600px;
+    height: 400px;
 }
