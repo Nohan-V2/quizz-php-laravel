@@ -17,17 +17,18 @@
         <section>
             @foreach ($quizz->questions as $question)
             <article>
-                <h2>{{ $question->position }}. {{ $question->question }}</h2>
-                <ul>
+                <div>
+                    <p>Question {{ $question->position }} of {{ $quizz->questions->count() }}</p>
+                    <h2>{{ $question->question }}</h2>
+                </div>
+                <form action="{{ route('submit_answer', ['question_id' => $question->id]) }}" method="POST">
                     @foreach ($question->answers as $answer)
-                    <li>
-                        {{ $answer->answer }}
-                        @if ($answer->is_correct)
-                        <strong>(Correct)</strong>
-                        @endif
-                    </li>
+                    <input type="radio" name="answer" value="{{ $answer->id }}" id="answer-{{ $answer->id }}">
+                    {{ $answer->answer }}
+                    </input>
                     @endforeach
-                </ul>
+                    <button type="submit">Submit</button>
+                </form>
             </article>
             @endforeach
         </section>

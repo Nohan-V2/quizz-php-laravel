@@ -15,4 +15,4 @@ Route::get("/users", [UserController::class, 'index'])->name('users');
 Route::get("/responses", [AnswerController::class, 'index'])->name('responses');
 Route::get("/login", [AuthController::class, 'login'])->name('login');
 Route::get("/signup", [AuthController::class, 'signup'])->name('signup');
-Route::get("/signout", [AuthController::class, 'signout'])->name('signout');
+Route::get("/logout", [AuthController::class, 'logout'])->name('logout');
