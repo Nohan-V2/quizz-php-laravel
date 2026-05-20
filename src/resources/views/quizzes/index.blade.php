@@ -10,9 +10,10 @@
 
 <body>
     <main>
-        <header>
-            <h1>Available Quizzes</h1>
-        </header>
+        <div>
+            <h1>Welcome to the <b>Frontend Quiz!</b></h1>
+            <p>Pick a subject to get started.</p>
+        </div>
 
         @if ($quizzes->isEmpty())
         <p>No quizzes available yet.</p>
