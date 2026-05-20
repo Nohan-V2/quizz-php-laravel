@@ -1,10 +1,8 @@
 <!-- <h1>QUIZZES</h1> -->
 
-
-
-<!-- <p><a href="/">Retour à l'accueil</a></p>
+<p><a href="/">Retour à l'accueil</a></p>
 <p><a href="/questions">Voir les questions</a></p>
-<p><a href="/users">Voir les utilisateurs</a></p> -->
+<p><a href="/users">Voir les utilisateurs</a></p>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,10 +38,10 @@
 </ul>
 @endif
 
-            <!-- <li><a href="quizzes1">HTML</a></li>
+            <li><a href="quizzes {{ $quizz->id }}">HTML</a></li>
             <li><a href="quizzes2">CSS</a></li>
-            <li><a href="quizzes3">Javascript</a></li>
-            <li><a href="quizzes4">Accessibility</a></li> -->
+            <li><a href="quizzes?id="3">Javascript</a></li>
+            <li><a href="quizzes4">Accessibility</a></li>
         </ul>
     </div>
     </div>
