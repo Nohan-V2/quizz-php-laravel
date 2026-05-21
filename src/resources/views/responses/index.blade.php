@@ -1,20 +1,34 @@
-<h1>RESPONSES</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-@if ($responses->isEmpty())
-<p>Aucune réponse disponible.</p>
-@else
-<ul>
-    @foreach ($responses as $response)
-    <li>
-        <strong>{{ $response->response }}</strong>
-        <strong>{{ $response->is_correct }}</strong>
-        <strong>{{ $response->question_id }}</strong>
-    </li>
-    @endforeach
-</ul>
-@endif
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responses</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
 
-<p><a href="/">Retour à l'accueil</a></p>
-<p><a href="/questions">Voir les questions</a></p>
-<p><a href="/quizzes">Voir les quizz</a></p>
-<p><a href="/users">Voir les utilisateurs</a></p>
+<body>
+    <main>
+        <h1>Responses</h1>
+
+        @if ($responses->isEmpty())
+        <p>No answers found.</p>
+        @else
+        <ul>
+            @foreach ($responses as $response)
+            <li>
+                {{ $response->answer }}
+                @if ($response->question)
+                <span>— Question: {{ $response->question->question }}</span>
+                @endif
+            </li>
+            @endforeach
+        </ul>
+        @endif
+
+        <p><a href="{{ route('quizzes') }}">Back to quizzes</a></p>
+    </main>
+</body>
+
+</html>

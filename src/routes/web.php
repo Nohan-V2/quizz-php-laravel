@@ -1,14 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuizzController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\QuestionController;
-use App\Http\Controllers\ResponseController;
+use App\Http\Controllers\AnswerController;
+use App\Http\Controllers\UserController;
 
 Route::get("/", [QuizzController::class, 'index']);
 Route::get("/quizzes", [QuizzController::class, 'index'])->name('quizzes');
 Route::get("/quizzes/{id}", [QuizzController::class, 'showOneQuizz'])->name('quizzes.show');
+Route::get("/questions", [QuestionController::class, 'index'])->name('questions');
+Route::get("/users", [UserController::class, 'index'])->name('users');
+Route::get("/responses", [AnswerController::class, 'index'])->name('responses');
 Route::get("/login", [AuthController::class, 'login'])->name('login');
 Route::get("/signup", [AuthController::class, 'signup'])->name('signup');
+Route::get("/signup", [AuthController::class, 'signup'])->name('signup');
+Route::get("/logout", [AuthController::class, 'logout'])->name('logout');

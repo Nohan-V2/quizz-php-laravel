@@ -1,18 +1,29 @@
-<h1>USERS</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-@if ($users->isEmpty())
-<p>Aucun utilisateur.</p>
-@else
-<ul>
-    @foreach ($users as $user)
-    <li>
-        <strong>{{ $user->name }}</strong>
-    </li>
-    @endforeach
-</ul>
-@endif
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
 
-<p><a href="/">Retour à l'accueil</a></p>
-<p><a href="/quizzes">Voir les quizz</a></p>
-<p><a href="/questions">Voir les questions</a></p>
-<p><a href="/responses">Voir les réponses</a></p>
+<body>
+    <main>
+        <h1>Users</h1>
+
+        @if ($users->isEmpty())
+        <p>No users registered.</p>
+        @else
+        <ul>
+            @foreach ($users as $user)
+            <li>{{ $user->name }} ({{ $user->email }})</li>
+            @endforeach
+        </ul>
+        @endif
+
+        <p><a href="{{ route('quizzes') }}">Back to quizzes</a></p>
+    </main>
+</body>
+
+</html>

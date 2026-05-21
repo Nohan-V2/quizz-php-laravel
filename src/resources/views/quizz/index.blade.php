@@ -40,7 +40,7 @@
 
             <li><a href="quizzes {{ $quizz->id }}">HTML</a></li>
             <li><a href="quizzes2">CSS</a></li>
-            <li><a href="quizzes?id="3">Javascript</a></li>
+            <li><a href="quizze">Javascript</a></li>
             <li><a href="quizzes4">Accessibility</a></li>
         </ul>
     </div>
